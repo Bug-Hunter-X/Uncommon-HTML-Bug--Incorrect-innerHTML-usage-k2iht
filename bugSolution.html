@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Correct way to append, ensuring the element exists before modification
+    const myDiv = document.getElementById('myDiv');
+    if (myDiv) {
+      myDiv.innerHTML += "<p>This text will append correctly.</p>";
+    }
+  </script>
+</body>
+</html>
